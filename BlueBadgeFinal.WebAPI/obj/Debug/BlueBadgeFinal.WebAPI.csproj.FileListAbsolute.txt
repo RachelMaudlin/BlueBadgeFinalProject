@@ -1,0 +1,2 @@
+C:\Users\rachel.maudlin\source\repos\BlueBadgeFinal\BlueBadgeFinal.WebAPI\obj\Debug\BlueBadgeFinal.WebAPI.csprojAssemblyReference.cache
+C:\Users\rachel.maudlin\source\repos\BlueBadgeFinal\BlueBadgeFinal.WebAPI\obj\Debug\BlueBadgeFinal.WebAPI.csproj.CoreCompileInputs.cache

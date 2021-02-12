@@ -1,0 +1,16 @@
+C:\Users\rachel.maudlin\source\repos\BlueBadgeFinal\BlueBadge.Services\bin\Debug\BlueBadge.Services.dll.config
+C:\Users\rachel.maudlin\source\repos\BlueBadgeFinal\BlueBadge.Services\bin\Debug\BlueBadge.Services.dll
+C:\Users\rachel.maudlin\source\repos\BlueBadgeFinal\BlueBadge.Services\bin\Debug\BlueBadge.Services.pdb
+C:\Users\rachel.maudlin\source\repos\BlueBadgeFinal\BlueBadge.Services\bin\Debug\EntityFramework.dll
+C:\Users\rachel.maudlin\source\repos\BlueBadgeFinal\BlueBadge.Services\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rachel.maudlin\source\repos\BlueBadgeFinal\BlueBadge.Services\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\rachel.maudlin\source\repos\BlueBadgeFinal\BlueBadge.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\rachel.maudlin\source\repos\BlueBadgeFinal\BlueBadge.Services\bin\Debug\EntityFramework.xml
+C:\Users\rachel.maudlin\source\repos\BlueBadgeFinal\BlueBadge.Services\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\rachel.maudlin\source\repos\BlueBadgeFinal\BlueBadge.Services\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\rachel.maudlin\source\repos\BlueBadgeFinal\BlueBadge.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\rachel.maudlin\source\repos\BlueBadgeFinal\BlueBadge.Services\obj\Debug\BlueBadge.Services.csprojAssemblyReference.cache
+C:\Users\rachel.maudlin\source\repos\BlueBadgeFinal\BlueBadge.Services\obj\Debug\BlueBadge.Services.csproj.CoreCompileInputs.cache
+C:\Users\rachel.maudlin\source\repos\BlueBadgeFinal\BlueBadge.Services\obj\Debug\BlueBadge.Services.csproj.CopyComplete
+C:\Users\rachel.maudlin\source\repos\BlueBadgeFinal\BlueBadge.Services\obj\Debug\BlueBadge.Services.dll
+C:\Users\rachel.maudlin\source\repos\BlueBadgeFinal\BlueBadge.Services\obj\Debug\BlueBadge.Services.pdb
