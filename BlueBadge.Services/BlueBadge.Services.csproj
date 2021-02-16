@@ -54,12 +54,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="GameService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BlueBadge.Data\BlueBadge.Data.csproj">
+      <Project>{99f67a09-5448-44ad-9a7b-51f80ef4f703}</Project>
+      <Name>BlueBadge.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BlueBadge.Models\BlueBadge.Models.csproj">
+      <Project>{99a7bbce-bf16-408d-bd61-146377d09c41}</Project>
+      <Name>BlueBadge.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

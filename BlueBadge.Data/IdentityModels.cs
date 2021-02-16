@@ -33,7 +33,7 @@ namespace BlueBadge.Data
             return new ApplicationDbContext();
         }
 
-        public DbSet<Note> Notes { get; set; }
+        public DbSet<VideoGames> VideoGame { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
