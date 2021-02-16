@@ -9,17 +9,17 @@ namespace BlueBadge.Services
     public class GameService
     {
 
-        public GameService _gameId = new GameService();
+        public int _gameId;
         
 
-        public bool CreateGame(GameCreate model, int GameId)
+        public bool CreateGameById(GameCreate model)
         {
             var entity =
                 new VideoGames()
                 {
-                    GameId = GameId,
                     GameTitle = model.GameTitle,
-                    GameConsole = model.GameConsole,
+                    Console =  model.Console,
+                    GenreType = model.GenreType,
                     ReleaseYear = model.ReleaseYear,
                     CreatedUtc = DateTimeOffset.Now
                 };
@@ -41,27 +41,60 @@ namespace BlueBadge.Services
                        new GameList
                        {
                            GameId = e.GameId,
+                           Quantity = e.Quantity,
                            GameTitle = e.GameTitle,
                            CreatedUtc = e.CreatedUtc
-
                        }
-
                     );
                 return query.ToArray();
-                    
-                                                        
-
-                
             }
-                
-               
-                 
-                
-                
-
-            
         }
+        public GameDetails GetGameById()
+        {
+            using(var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx
+                    .VideoGame
+                    .Single(e => e.GameId == _gameId);
+                return
+                    new GameDetails
+                    {
+                        GameId = entity.GameId,
+                        GameTitle = entity.GameTitle,
+                        Console = entity.Console,
+                        GenreType = entity.GenreType,
+                        ReleaseYear = entity.ReleaseYear,
+                        IsOnline = entity.IsOnline,
+                        CreatedUtc = entity.CreatedUtc,
+                        ModifiedUtc = entity.ModifiedUtc
+                    };
+            }
+        }
+        public bool UpdateGame (GameEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx
+                    .VideoGame
+                    .Single(e => e.GameId == model.GameId);
+                entity.GameId = model.GameId;
+                entity.GameTitle = model.GameTitle;
+                entity.Quantity = model.Quantity;
+                entity.ModifiedUtc = DateTimeOffset.UtcNow;
 
-     
+                return ctx.SaveChanges() == 1;
+            }
+        }
+        public bool DeleteGame()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx
+                    .VideoGame
+                    .Single(e => e.GameId == _gameId);
+                ctx.VideoGame.Remove(entity);
+                   return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

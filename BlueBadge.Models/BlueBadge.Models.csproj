@@ -55,12 +55,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GameCreate.cs" />
+    <Compile Include="GameDetails.cs" />
+    <Compile Include="GameEdit.cs" />
     <Compile Include="GameList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BlueBadge.Data\BlueBadge.Data.csproj">
+      <Project>{99f67a09-5448-44ad-9a7b-51f80ef4f703}</Project>
+      <Name>BlueBadge.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

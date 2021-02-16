@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlueBadge.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -6,10 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BlueBadge.Models
-{//enum is not done yet.
-   
-
-
+{
     public class GameCreate
     {
         [Required]
@@ -17,10 +15,8 @@ namespace BlueBadge.Models
         [MaxLength(50, ErrorMessage = "There are too many characters")]
         public string GameTitle { get; set; }
         [Required]
-        public string GameConsole { get; set; }
         public DateTime ReleaseYear { get; set; }
-
-
-
+        public TypeOfGenre GenreType { get; set; }
+        public GameConsole Console { get; set; }
     }
 }

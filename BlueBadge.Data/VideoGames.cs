@@ -7,9 +7,21 @@ using System.Threading.Tasks;
 
 namespace BlueBadge.Data
 {
-
-    //can not figure out how to use this enum. We may need to use a list instead.
-  /* public enum GameConsole
+    public enum TypeOfGenre
+    {
+        Fighting,
+        Adventure,
+        Servival,
+        Retro,
+        Shooting,
+        RPG,
+        Puzzle,
+        Sports,
+        Simulation,
+        Action,
+        Stratagy
+    }
+    public enum GameConsole
     {
         Playstation1 = 1,
         Playstation2,
@@ -26,28 +38,21 @@ namespace BlueBadge.Data
         SegaDreamcast,
         Gameboy,
         N64,
-        GameCube,
-    }*/
-
-
+        GameCube
+    }
     public class VideoGames
     {
-
-
         [Key]
         public int GameId { get; set; }
         [Required]
-   
         public string GameTitle { get; set; }
-        [Required]
-        public string GameConsole { get; set; }
-        [Required]
+        public GameConsole Console { get; set; }
+        public bool IsOnline { get; set; }
+        public int Quantity { get; set; }
         public DateTime ReleaseYear { get; set; }
-
         [Required]
+        public TypeOfGenre GenreType { get; set; }
         public DateTimeOffset CreatedUtc { get; set; }
-
         public DateTimeOffset? ModifiedUtc { get; set; }
-
     }
 }

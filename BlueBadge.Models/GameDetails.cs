@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlueBadge.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -7,17 +8,17 @@ using System.Threading.Tasks;
 
 namespace BlueBadge.Models
 {
-    public class GameList
+    public class GameDetails
     {
-        //this is for when we want to see a specific vidoe game in our database
         public int GameId { get; set; }
         public string GameTitle { get; set; }
-        public int Quantity { get; set; }
-        //datetimeoffset may need to change.
-        [Required]
+        public GameConsole Console { get; set; }
+        public TypeOfGenre GenreType { get; set; }
+        public DateTime ReleaseYear { get; set; }
+        public bool IsOnline { get; set; }
         [Display(Name = "Created")]
-        public DateTimeOffset? CreatedUtc { get; set; }
-
+        public DateTimeOffset CreatedUtc { get; set; }
+        [Display(Name = "Modified")]
         public DateTimeOffset? ModifiedUtc { get; set; }
     }
 }
