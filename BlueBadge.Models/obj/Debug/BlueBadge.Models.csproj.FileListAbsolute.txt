@@ -14,3 +14,22 @@ C:\Users\rachel.maudlin\source\repos\BlueBadgeFinal\BlueBadge.Models\obj\Debug\B
 C:\Users\rachel.maudlin\source\repos\BlueBadgeFinal\BlueBadge.Models\obj\Debug\BlueBadge.Models.csproj.CopyComplete
 C:\Users\rachel.maudlin\source\repos\BlueBadgeFinal\BlueBadge.Models\obj\Debug\BlueBadge.Models.dll
 C:\Users\rachel.maudlin\source\repos\BlueBadgeFinal\BlueBadge.Models\obj\Debug\BlueBadge.Models.pdb
+C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Models\bin\Debug\BlueBadge.Models.dll.config
+C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Models\bin\Debug\BlueBadge.Models.dll
+C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Models\bin\Debug\BlueBadge.Models.pdb
+C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Models\bin\Debug\BlueBadge.Data.dll
+C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Models\bin\Debug\EntityFramework.dll
+C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Models\bin\Debug\BlueBadge.Data.pdb
+C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Models\bin\Debug\BlueBadge.Data.dll.config
+C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Models\bin\Debug\EntityFramework.xml
+C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Models\obj\Debug\BlueBadge.Models.csprojAssemblyReference.cache
+C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Models\obj\Debug\BlueBadge.Models.csproj.CoreCompileInputs.cache
+C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Models\obj\Debug\BlueBadge.Models.csproj.CopyComplete
+C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Models\obj\Debug\BlueBadge.Models.dll
+C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Models\obj\Debug\BlueBadge.Models.pdb
