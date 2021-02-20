@@ -62,6 +62,14 @@ namespace BlueBadgeFinal.WebAPI.Controllers
                 return InternalServerError();
                 return Ok(game);
         }
+        [HttpDelete]
+        public IHttpActionResult Delete(int id)
+        {
+            var service = CreateGameService();
+            if (!service.DeleteGame(id))
+                return InternalServerError();
+            return Ok();
+        }
        
             
      
