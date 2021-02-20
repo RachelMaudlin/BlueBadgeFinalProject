@@ -15,7 +15,7 @@ namespace BlueBadge.Models
         public GameConsole Console { get; set; }
         public TypeOfGenre GenreType { get; set; }
         public DateTime ReleaseYear { get; set; }
-        public bool IsOnline { get; set; }
+        
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }
         [Display(Name = "Modified")]

@@ -9,14 +9,19 @@ namespace BlueBadge.Services
     public class GameService
     {
 
-        public int _gameId;
+        private readonly Guid _userId;
+        public GameService(Guid userId)
+        {
+            _userId = userId;
+        }
         
 
-        public bool CreateGameById(GameCreate model)
+        public bool CreateGame (GameCreate model)
         {
             var entity =
                 new VideoGames()
                 {
+                    OwnerId = _userId,
                     GameTitle = model.GameTitle,
                     Console =  model.Console,
                     GenreType = model.GenreType,
@@ -35,13 +40,13 @@ namespace BlueBadge.Services
             {
                 var query = ctx
                     .VideoGame
-                    .Where(e => e.GameId == _gameId)
+                    .Where(e => e.OwnerId == _userId)
                     .Select(
                     e =>
                        new GameList
                        {
                            GameId = e.GameId,
-                           Quantity = e.Quantity,
+                           Quantity = (short)e.Quantity,
                            GameTitle = e.GameTitle,
                            CreatedUtc = e.CreatedUtc
                        }
@@ -49,13 +54,13 @@ namespace BlueBadge.Services
                 return query.ToArray();
             }
         }
-        public GameDetails GetGameById()
+        public GameDetails GetGameById(int id)
         {
             using(var ctx = new ApplicationDbContext())
             {
                 var entity = ctx
                     .VideoGame
-                    .Single(e => e.GameId == _gameId);
+                    .Single(e => e.GameId == id && e.OwnerId == _userId);
                 return
                     new GameDetails
                     {
@@ -64,7 +69,7 @@ namespace BlueBadge.Services
                         Console = entity.Console,
                         GenreType = entity.GenreType,
                         ReleaseYear = entity.ReleaseYear,
-                        IsOnline = entity.IsOnline,
+                   
                         CreatedUtc = entity.CreatedUtc,
                         ModifiedUtc = entity.ModifiedUtc
                     };
@@ -76,7 +81,7 @@ namespace BlueBadge.Services
             {
                 var entity = ctx
                     .VideoGame
-                    .Single(e => e.GameId == model.GameId);
+                    .Single(e => e.GameId == model.GameId && e.OwnerId == _userId);
                 entity.GameId = model.GameId;
                 entity.GameTitle = model.GameTitle;
                 entity.Quantity = model.Quantity;
@@ -85,13 +90,13 @@ namespace BlueBadge.Services
                 return ctx.SaveChanges() == 1;
             }
         }
-        public bool DeleteGame()
+        public bool DeleteGame(int gameId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity = ctx
                     .VideoGame
-                    .Single(e => e.GameId == _gameId);
+                    .Single(e => e.GameId == gameId && e.OwnerId == _userId);
                 ctx.VideoGame.Remove(entity);
                    return ctx.SaveChanges() == 1;
             }

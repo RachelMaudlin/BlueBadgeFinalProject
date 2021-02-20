@@ -18,5 +18,8 @@ namespace BlueBadge.Models
         public DateTime ReleaseYear { get; set; }
         public TypeOfGenre GenreType { get; set; }
         public GameConsole Console { get; set; }
+       
+        public short Quantity { get; set; }
+
     }
 }

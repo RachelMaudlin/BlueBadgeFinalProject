@@ -9,15 +9,16 @@ namespace BlueBadge.Models
 {
     public class GameList
     {
-        //this is for when we want to see a specific vidoe game in our database
+        
         public int GameId { get; set; }
         public string GameTitle { get; set; }
-        public int Quantity { get; set; }
-        //datetimeoffset may need to change.
-        [Required]
+        public short    Quantity { get; set; }
         [Display(Name = "Created")]
-        public DateTimeOffset? CreatedUtc { get; set; }
+        public DateTimeOffset CreatedUtc { get; set; }
 
-        public DateTimeOffset? ModifiedUtc { get; set; }
+
+
+
+        
     }
 }
