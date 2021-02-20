@@ -14,16 +14,16 @@ namespace BlueBadge.Services
         {
             _userId = userId;
         }
-        
 
-        public bool CreateGame (GameCreate model)
+
+        public bool CreateGame(GameCreate model)
         {
             var entity =
                 new VideoGames()
                 {
                     OwnerId = _userId,
                     GameTitle = model.GameTitle,
-                    Console =  model.Console,
+                    Console = model.Console,
                     GenreType = model.GenreType,
                     ReleaseYear = model.ReleaseYear,
                     CreatedUtc = DateTimeOffset.Now
@@ -46,9 +46,12 @@ namespace BlueBadge.Services
                        new GameList
                        {
                            GameId = e.GameId,
-                           Quantity = (short)e.Quantity,
                            GameTitle = e.GameTitle,
-                           CreatedUtc = e.CreatedUtc
+                           Console = e.Console,
+                           GenreType = e.GenreType,
+                           ReleaseYear = e.ReleaseYear,
+                           CreatedUtc = e.CreatedUtc,
+                           ModifiedUtc = e.ModifiedUtc
                        }
                     );
                 return query.ToArray();
@@ -56,7 +59,7 @@ namespace BlueBadge.Services
         }
         public GameDetails GetGameById(int id)
         {
-            using(var ctx = new ApplicationDbContext())
+            using (var ctx = new ApplicationDbContext())
             {
                 var entity = ctx
                     .VideoGame
@@ -69,21 +72,23 @@ namespace BlueBadge.Services
                         Console = entity.Console,
                         GenreType = entity.GenreType,
                         ReleaseYear = entity.ReleaseYear,
-                   
                         CreatedUtc = entity.CreatedUtc,
                         ModifiedUtc = entity.ModifiedUtc
                     };
             }
         }
-        public bool UpdateGame (GameEdit model)
+        
+        public bool UpdateGame(GameEdit model)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity = ctx
                     .VideoGame
                     .Single(e => e.GameId == model.GameId && e.OwnerId == _userId);
-                entity.GameId = model.GameId;
+
                 entity.GameTitle = model.GameTitle;
+                entity.GenreType = model.GenreType;
+                entity.Console = model.Console;
                 entity.Quantity = model.Quantity;
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;
 
@@ -98,7 +103,7 @@ namespace BlueBadge.Services
                     .VideoGame
                     .Single(e => e.GameId == gameId && e.OwnerId == _userId);
                 ctx.VideoGame.Remove(entity);
-                   return ctx.SaveChanges() == 1;
+                return ctx.SaveChanges() == 1;
             }
         }
     }

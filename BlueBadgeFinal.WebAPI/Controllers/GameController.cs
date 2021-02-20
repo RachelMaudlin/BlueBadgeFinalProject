@@ -13,7 +13,7 @@ namespace BlueBadgeFinal.WebAPI.Controllers
     [Authorize]
     public class GameController : ApiController
     {
-       private GameService CreateGameService()
+        private GameService CreateGameService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var gameService = new GameService(userId);
@@ -48,6 +48,24 @@ namespace BlueBadgeFinal.WebAPI.Controllers
             var game = gameService.GetGameById(id);
             return Ok(game);
         }
+        [HttpPut]
+        public IHttpActionResult Put( [FromBody]GameEdit game)
+        {
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            GameService service = CreateGameService();
+           
+
+            if (!service.UpdateGame(game))
+                return InternalServerError();
+                return Ok(game);
+        }
+       
+            
+     
+        
 
             
 

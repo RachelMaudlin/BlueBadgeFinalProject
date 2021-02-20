@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlueBadge.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -12,13 +13,20 @@ namespace BlueBadge.Models
         
         public int GameId { get; set; }
         public string GameTitle { get; set; }
-        public short    Quantity { get; set; }
+        public GameConsole Console { get; set; }
+        public TypeOfGenre GenreType { get; set; }
+        public int Quantity { get; set; }
+
+        public DateTime ReleaseYear { get; set; }
+        [Required]
+        
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }
+        public DateTimeOffset? ModifiedUtc { get; set; }
 
 
 
 
-        
+
     }
 }
