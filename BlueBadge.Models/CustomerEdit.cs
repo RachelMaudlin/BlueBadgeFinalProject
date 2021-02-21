@@ -1,17 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlueBadge.Data
+namespace BlueBadge.Models
 {
-    public class Customer
+    public class CustomerEdit
     {
-        [Key]
-        public int CustomerId { get; set; }
-
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
@@ -19,10 +15,5 @@ namespace BlueBadge.Data
         public string Email { get; set; }
 
         public string ShippingAddress { get; set; }
-
-        [Required]
-        public DateTimeOffset CreatedUtc { get; set; }
-
-        public DateTimeOffset? ModifiedUtc { get; set; }
     }
 }

@@ -5,11 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlueBadge.Data
+namespace BlueBadge.Models
 {
-    public class Customer
+    public class CustomerDetails
     {
-        [Key]
         public int CustomerId { get; set; }
 
         public string FirstName { get; set; }
@@ -20,9 +19,10 @@ namespace BlueBadge.Data
 
         public string ShippingAddress { get; set; }
 
-        [Required]
+        [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }
 
+        [Display(Name = "Modified")]
         public DateTimeOffset? ModifiedUtc { get; set; }
     }
 }
