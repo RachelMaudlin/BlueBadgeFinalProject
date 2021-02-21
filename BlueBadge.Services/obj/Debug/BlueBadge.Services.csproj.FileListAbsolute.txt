@@ -14,25 +14,25 @@ C:\Users\rachel.maudlin\source\repos\BlueBadgeFinal\BlueBadge.Services\obj\Debug
 C:\Users\rachel.maudlin\source\repos\BlueBadgeFinal\BlueBadge.Services\obj\Debug\BlueBadge.Services.csproj.CopyComplete
 C:\Users\rachel.maudlin\source\repos\BlueBadgeFinal\BlueBadge.Services\obj\Debug\BlueBadge.Services.dll
 C:\Users\rachel.maudlin\source\repos\BlueBadgeFinal\BlueBadge.Services\obj\Debug\BlueBadge.Services.pdb
-C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\BlueBadge.Services.dll.config
-C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\BlueBadge.Services.dll
-C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\BlueBadge.Services.pdb
-C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\BlueBadge.Data.dll
-C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\BlueBadge.Models.dll
-C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\EntityFramework.dll
-C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\Microsoft.AspNet.Identity.Core.dll
-C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\BlueBadge.Data.pdb
-C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\BlueBadge.Data.dll.config
-C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\BlueBadge.Models.pdb
-C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\BlueBadge.Models.dll.config
-C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\EntityFramework.xml
-C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\Microsoft.AspNet.Identity.Core.xml
-C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Services\obj\Debug\BlueBadge.Services.csprojAssemblyReference.cache
-C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Services\obj\Debug\BlueBadge.Services.csproj.CoreCompileInputs.cache
-C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Services\obj\Debug\BlueBadge.Services.csproj.CopyComplete
-C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Services\obj\Debug\BlueBadge.Services.dll
-C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Services\obj\Debug\BlueBadge.Services.pdb
+C:\ElevenFiftyProjects\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\BlueBadge.Services.dll.config
+C:\ElevenFiftyProjects\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\BlueBadge.Services.dll
+C:\ElevenFiftyProjects\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\BlueBadge.Services.pdb
+C:\ElevenFiftyProjects\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\BlueBadge.Data.dll
+C:\ElevenFiftyProjects\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\BlueBadge.Models.dll
+C:\ElevenFiftyProjects\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\EntityFramework.dll
+C:\ElevenFiftyProjects\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\EntityFramework.SqlServer.dll
+C:\ElevenFiftyProjects\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\ElevenFiftyProjects\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\ElevenFiftyProjects\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\BlueBadge.Data.pdb
+C:\ElevenFiftyProjects\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\BlueBadge.Data.dll.config
+C:\ElevenFiftyProjects\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\BlueBadge.Models.pdb
+C:\ElevenFiftyProjects\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\BlueBadge.Models.dll.config
+C:\ElevenFiftyProjects\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\EntityFramework.xml
+C:\ElevenFiftyProjects\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\EntityFramework.SqlServer.xml
+C:\ElevenFiftyProjects\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\ElevenFiftyProjects\BlueBadgeFinalProject\BlueBadge.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\ElevenFiftyProjects\BlueBadgeFinalProject\BlueBadge.Services\obj\Debug\BlueBadge.Services.csprojAssemblyReference.cache
+C:\ElevenFiftyProjects\BlueBadgeFinalProject\BlueBadge.Services\obj\Debug\BlueBadge.Services.csproj.CoreCompileInputs.cache
+C:\ElevenFiftyProjects\BlueBadgeFinalProject\BlueBadge.Services\obj\Debug\BlueBadge.Services.csproj.CopyComplete
+C:\ElevenFiftyProjects\BlueBadgeFinalProject\BlueBadge.Services\obj\Debug\BlueBadge.Services.dll
+C:\ElevenFiftyProjects\BlueBadgeFinalProject\BlueBadge.Services\obj\Debug\BlueBadge.Services.pdb
