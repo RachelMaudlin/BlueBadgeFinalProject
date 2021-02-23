@@ -10,6 +10,7 @@ namespace BlueBadge.Models
 {
     public class GameCreate
     {
+     
         [Required]
         [MinLength(2, ErrorMessage = "There must be a minimum of two characters.")]
         [MaxLength(50, ErrorMessage = "There are too many characters")]
@@ -18,5 +19,8 @@ namespace BlueBadge.Models
         public DateTime ReleaseYear { get; set; }
         public TypeOfGenre GenreType { get; set; }
         public GameConsole Console { get; set; }
+       
+        public short Quantity { get; set; }
+
     }
 }

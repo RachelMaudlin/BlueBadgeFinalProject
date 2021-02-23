@@ -19,5 +19,10 @@ namespace BlueBadge.Data
         public string Email { get; set; }
 
         public string ShippingAddress { get; set; }
+
+        [Required]
+        public DateTimeOffset CreatedUtc { get; set; }
+
+        public DateTimeOffset? ModifiedUtc { get; set; }
     }
 }

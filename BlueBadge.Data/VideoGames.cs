@@ -9,7 +9,7 @@ namespace BlueBadge.Data
 {
     public enum TypeOfGenre
     {
-        Fighting,
+        Fighting = 1,
         Adventure,
         Servival,
         Retro,
@@ -45,9 +45,11 @@ namespace BlueBadge.Data
         [Key]
         public int GameId { get; set; }
         [Required]
+        public Guid OwnerId { get; set; }
+        [Required]
         public string GameTitle { get; set; }
         public GameConsole Console { get; set; }
-        public bool IsOnline { get; set; }
+     
         public int Quantity { get; set; }
         public DateTime ReleaseYear { get; set; }
         [Required]
