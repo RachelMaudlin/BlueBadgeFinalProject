@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace BlueBadge.Models
 {
-    class OrdersListItem
+    public class OrdersListItem
     {
         public int OrderId { get; set; }
+
         [Display(Name="Ordered")]
         public DateTime OrderDate { get; set; }
     }
