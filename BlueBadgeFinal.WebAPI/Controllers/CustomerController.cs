@@ -49,5 +49,18 @@ namespace BlueBadgeFinal.WebAPI.Controllers
             var customer = customerService.GetCustomerById(id);
             return Ok(customer);
         }
+
+        public IHttpActionResult Put(CustomerEdit customer)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            CustomerService service = CreateCustomerService();
+
+            if (!service.UpdateCustomer(customer))
+                return InternalServerError();
+
+            return Ok();
+        }
     }
 }

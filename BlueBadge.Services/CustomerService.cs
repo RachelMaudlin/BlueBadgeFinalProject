@@ -81,5 +81,24 @@ namespace BlueBadge.Services
                     };
             }
         }
+
+        public bool UpdateCustomer(CustomerEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Customers
+                        .Single(e => e.CustomerId == model.CustomerId && e.CustomerId == _customerId);
+
+                entity.FirstName = model.FirstName;
+                entity.LastName = model.LastName;
+                entity.Email = model.Email;
+                entity.ShippingAddress = model.ShippingAddress;
+                entity.ModifiedUtc = DateTimeOffset.UtcNow;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }
