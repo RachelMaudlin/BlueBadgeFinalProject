@@ -62,5 +62,15 @@ namespace BlueBadgeFinal.WebAPI.Controllers
 
             return Ok();
         }
+
+        public IHttpActionResult Delete(Guid id)
+        {
+            var service = CreateCustomerService();
+
+            if (!service.DeleteCustomer(id))
+                return InternalServerError();
+
+            return Ok();
+        }
     }
 }

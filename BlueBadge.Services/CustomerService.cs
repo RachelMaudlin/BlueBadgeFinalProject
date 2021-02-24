@@ -100,5 +100,20 @@ namespace BlueBadge.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+
+        public bool DeleteCustomer(Guid customerId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Customers
+                        .Single(e => e.CustomerId == customerId && e.CustomerId == _customerId);
+
+                ctx.Customers.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }
