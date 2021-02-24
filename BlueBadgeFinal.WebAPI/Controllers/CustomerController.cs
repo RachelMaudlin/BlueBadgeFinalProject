@@ -41,5 +41,13 @@ namespace BlueBadgeFinal.WebAPI.Controllers
 
             return Ok();
         }
+
+        [HttpGet]
+        public IHttpActionResult Get(Guid id)
+        {
+            CustomerService customerService = CreateCustomerService();
+            var customer = customerService.GetCustomerById(id);
+            return Ok(customer);
+        }
     }
 }

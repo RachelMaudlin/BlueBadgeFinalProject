@@ -59,5 +59,27 @@ namespace BlueBadge.Services
                 return query.ToArray();
             }
         }
+
+        public CustomerDetails GetCustomerById(Guid id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Customers
+                        .Single(e => e.CustomerId == id && e.CustomerId == _customerId);
+                return
+                    new CustomerDetails
+                    {
+                        CustomerId = entity.CustomerId,
+                        FirstName = entity.FirstName,
+                        LastName = entity.LastName,
+                        Email = entity.Email,
+                        ShippingAddress = entity.ShippingAddress,
+                        CreatedUtc = entity.CreatedUtc,
+                        ModifiedUtc = entity.ModifiedUtc
+                    };
+            }
+        }
     }
 }
