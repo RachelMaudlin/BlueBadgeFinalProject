@@ -10,7 +10,7 @@ namespace BlueBadge.Data
     public class Customer
     {
         [Key]
-        public int CustomerId { get; set; }
+        public Guid CustomerId { get; set; }
 
         public string FirstName { get; set; }
 

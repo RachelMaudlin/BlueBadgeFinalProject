@@ -10,13 +10,19 @@ namespace BlueBadge.Services
 {
     public class CustomerService
     {
-        private readonly int _customerId;
+        private readonly Guid _customerId;
+
+        public CustomerService(Guid customerId)
+        {
+            _customerId = customerId;
+        }
 
         public bool CreateCustomer(CustomerCreate model)
         {
             var entity =
                 new Customer()
                 {
+                    CustomerId = _customerId,
                     FirstName = model.FirstName,
                     LastName = model.LastName,
                     Email = model.Email,

@@ -55,6 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomerCreate.cs" />
+    <Compile Include="CustomerDetails.cs" />
+    <Compile Include="CustomerEdit.cs" />
+    <Compile Include="CustomerList.cs" />
     <Compile Include="GameCreate.cs" />
     <Compile Include="GameDetails.cs" />
     <Compile Include="GameEdit.cs" />
