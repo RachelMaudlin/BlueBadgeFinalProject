@@ -36,3 +36,7 @@ C:\ElevenFiftyProjects\BlueBadgeFinalProject\BlueBadge.Services\obj\Debug\BlueBa
 C:\ElevenFiftyProjects\BlueBadgeFinalProject\BlueBadge.Services\obj\Debug\BlueBadge.Services.csproj.CopyComplete
 C:\ElevenFiftyProjects\BlueBadgeFinalProject\BlueBadge.Services\obj\Debug\BlueBadge.Services.dll
 C:\ElevenFiftyProjects\BlueBadgeFinalProject\BlueBadge.Services\obj\Debug\BlueBadge.Services.pdb
+C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Services\obj\Debug\BlueBadge.Services.csprojAssemblyReference.cache
+C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Services\obj\Debug\BlueBadge.Services.csproj.CoreCompileInputs.cache
+C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Services\obj\Debug\BlueBadge.Services.dll
+C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadge.Services\obj\Debug\BlueBadge.Services.pdb

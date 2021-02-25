@@ -62,7 +62,11 @@
     <Compile Include="GameDetails.cs" />
     <Compile Include="GameEdit.cs" />
     <Compile Include="GameList.cs" />
+    <Compile Include="OrderItemsCreate.cs" />
+    <Compile Include="OrderItemsListItem.cs" />
     <Compile Include="OrdersCreate.cs" />
+    <Compile Include="OrdersDetails.cs" />
+    <Compile Include="OrdersEdit.cs" />
     <Compile Include="OrdersListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -11,23 +11,23 @@ namespace BlueBadge.Services
     public class OrdersService
     {
         private readonly Guid _orderId;
-        private readonly Guid _userId;
-        private readonly Guid _paymentId;
+        
 
-        public OrdersService(Guid userId)
+        public OrdersService(Guid orderId)
         {
-            _userId = userId;
+            _orderId = orderId;
         }
 
+      
      
-        public bool CreateOrder(OrdersCreate model)
+        public bool CreateOrders(OrdersCreate model)
         {
             var entity =
-                new OrdersService()
+                new Orders()
                 {
                     OrderId = _orderId,
-                    CustomerId = _userId,
-                    PaymentId = _paymentId,
+                    CustomerId = model.CustomerId,
+                    PaymentId = model.PaymentId,
                     OrderDate = model.OrderDate,
                     ShipDate = model.ShipDate,
                 };
@@ -42,20 +42,63 @@ namespace BlueBadge.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var query = 
+                var query =
                     ctx
-                        .Orders
-                        .Where(else => CustomerId == _userId)
-                        .Select(
-                            else =>
-                                    new OrdersListItem
-                                    {
-                                        _orderId = e.OrderId,
-                                        ShipDate = e.ShipDate,
-                                    }
-                                );
+                    .Orders
+                    .Where(e => e.OrderId == _orderId)
+                    .Select(
+                        e =>
+                        new OrdersListItem
+                        {
+                            OrderId = e.OrderId,
+                            CustomerId = e.CustomerId,
+                            PaymentId = e.PaymentId,
+                            OrderDate = e.OrderDate,
+                            ShipDate = e.ShipDate,
+                        }
+                    );
+
                 return query.ToArray();
             }
         }
+        
+        public OrdersDetails GetOrdersById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Orders
+                    .Single(e => e.CustomerId == id && e.OrderId == _orderId);
+                return
+                    new OrdersDetails
+                    {
+                        OrderId = entity.OrderId,
+                        CustomerId = entity.CustomerId,
+                        PaymentId = entity.PaymentId,
+                        OrderDate = entity.OrderDate,
+                        ShipDate = entity.OrderDate
+                    };
+            }
+        }
+
+
+        public bool UpdateOrders(OrdersEdit model)
+        {
+            using(var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Orders
+                    .Single(e => e.OrderId == _orderId);
+
+                entity.CustomerId = model.CustomerId;
+                entity.PaymentId = model.PaymentId;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+        
+        
     }
 }

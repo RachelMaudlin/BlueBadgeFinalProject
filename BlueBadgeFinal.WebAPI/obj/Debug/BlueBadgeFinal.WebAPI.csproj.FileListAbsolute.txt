@@ -125,3 +125,7 @@ C:\ElevenFiftyProjects\BlueBadgeFinalProject\BlueBadgeFinal.WebAPI\obj\Debug\Blu
 C:\ElevenFiftyProjects\BlueBadgeFinalProject\BlueBadgeFinal.WebAPI\obj\Debug\BlueBadgeFinal.WebAPI.csproj.CopyComplete
 C:\ElevenFiftyProjects\BlueBadgeFinalProject\BlueBadgeFinal.WebAPI\obj\Debug\BlueBadgeFinal.WebAPI.dll
 C:\ElevenFiftyProjects\BlueBadgeFinalProject\BlueBadgeFinal.WebAPI\obj\Debug\BlueBadgeFinal.WebAPI.pdb
+C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadgeFinal.WebAPI\obj\Debug\BlueBadgeFinal.WebAPI.csprojAssemblyReference.cache
+C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadgeFinal.WebAPI\obj\Debug\BlueBadgeFinal.WebAPI.csproj.CoreCompileInputs.cache
+C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadgeFinal.WebAPI\obj\Debug\BlueBadgeFinal.WebAPI.dll
+C:\Users\rachel.maudlin\Desktop\ElevenFiftyProjects\Blue Badge\BlueBadgeFinal\BlueBadgeFinalProject\BlueBadgeFinal.WebAPI\obj\Debug\BlueBadgeFinal.WebAPI.pdb

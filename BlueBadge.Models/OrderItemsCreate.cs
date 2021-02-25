@@ -5,23 +5,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlueBadge.Data
+namespace BlueBadge.Models
 {
-    public class OrderItems
+    public class OrderItemsCreate
     {
-        [Key]
-        public Guid OrderId { get; set; }
-        public Guid CustomerId { get; set; }
+        [Required]
+        public Guid OrderID { get; set; }
         [Required]
         public Guid GameId { get; set; }
-        [Required]
         public Guid PaymentId { get; set; }
         [Required]
-        public double Price { get; set; }
-        [Required]
         public int Quantity { get; set; }
-        [Required]
         public DateTimeOffset CreatedUtc { get; set; }
-        public DateTimeOffset ModifiedUtc { get; set; }
     }
 }

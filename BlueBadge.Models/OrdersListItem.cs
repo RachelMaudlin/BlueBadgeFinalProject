@@ -9,9 +9,13 @@ namespace BlueBadge.Models
 {
     public class OrdersListItem
     {
-        public int OrderId { get; set; }
-
+        [Display(Name = "Order Number")]
+        public Guid OrderId { get; set; }
+        public int CustomerId { get; set; }
+        [Display(Name = "Credit Card Number")]
+        public int PaymentId { get; set; }
         [Display(Name="Ordered")]
         public DateTime OrderDate { get; set; }
+        public DateTime ShipDate { get; set; }
     }
 }
