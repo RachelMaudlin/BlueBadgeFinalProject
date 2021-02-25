@@ -63,6 +63,8 @@
     <Compile Include="GameEdit.cs" />
     <Compile Include="GameList.cs" />
     <Compile Include="OrderItemsCreate.cs" />
+    <Compile Include="OrderItemsDetails.cs" />
+    <Compile Include="OrderItemsEdit.cs" />
     <Compile Include="OrderItemsListItem.cs" />
     <Compile Include="OrdersCreate.cs" />
     <Compile Include="OrdersDetails.cs" />

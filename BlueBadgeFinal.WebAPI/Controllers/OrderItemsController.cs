@@ -40,5 +40,25 @@ namespace BlueBadgeFinal.WebAPI.Controllers
 
             return Ok();
         }
+
+        public IHttpActionResult Get(int id)
+        {
+            OrderItemsService orderItemsService = CreateOrderItemsService();
+            var orderItems = orderItemsService.GetOrderItemsById(id);
+            return Ok();
+        }
+
+        public IHttpActionResult Put(OrderItemsEdit orderItems)
+        {
+            if(!ModelState.IsValid)
+               return BadRequest(ModelState);
+
+            var service = CreateOrderItemsService();
+
+            if (!service.UpdateOrderItems(orderItems))
+                return InternalServerError();
+
+            return Ok();
+        }
     }
 }

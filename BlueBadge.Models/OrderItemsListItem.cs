@@ -11,11 +11,13 @@ namespace BlueBadge.Models
     {
         [Display(Name = "Order Number")]
         public Guid OrderId { get; set; }
+        public int CustomerId { get; set; }
         [Display(Name = "Game Identification")]
-        public Guid GameId { get; set; }
+        public int GameId { get; set; }
         [Display(Name = "Card Number")]
-        public Guid PaymentId { get; set; }
+        public int PaymentId { get; set; }
         [Display(Name ="Date Ordered")]
-        public DateTimeOffset CreatedUtc { get; set; }
+        public DateTimeOffset OrderDate{ get; set; }
+        public DateTimeOffset ShipDate { get; set; }
     }
 }

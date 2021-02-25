@@ -15,7 +15,7 @@ namespace BlueBadge.Models
         [Display(Name = "Credit Card Number")]
         public int PaymentId { get; set; }
         [Display(Name="Ordered")]
-        public DateTime OrderDate { get; set; }
-        public DateTime ShipDate { get; set; }
+        public DateTimeOffset OrderDate { get; set; }
+        public DateTimeOffset ShipDate { get; set; }
     }
 }

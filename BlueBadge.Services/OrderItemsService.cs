@@ -10,11 +10,11 @@ namespace BlueBadge.Services
 {
     public class OrderItemsService
     {
-        private readonly Guid _userId;
+        private readonly Guid _orderId;
 
-        public OrderItemsService(Guid userId)
+        public OrderItemsService(Guid orderId)
         {
-            _userId = userId;
+            _orderId = orderId;
         }
 
         public bool CreateOrderItems(OrderItemsCreate model)
@@ -22,11 +22,12 @@ namespace BlueBadge.Services
             var entity =
                 new OrderItems()
                 {
-                    CustomerId = _userId,
-                    OrderId = model.OrderID,
+                    OrderId = _orderId,
+                    CustomerId = model.CustomerId,
+                    GameId = model.GameId,
                     PaymentId = model.PaymentId,
                     Quantity = model.Quantity,
-                    CreatedUtc = DateTimeOffset.Now
+                    OrderDate = model.OrderDate,
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -44,20 +45,64 @@ namespace BlueBadge.Services
                 var query =
                     ctx
                     .OrderItems
-                    .Where(e => e.CustomerId == _userId)
+                    .Where(e => e.OrderId == _orderId)
                     .Select(
                         e =>
                         new OrderItemsListItem
                         {
-                            OrderId = e.OrderId,
-                            GameId = e.GameId,
-                            PaymentId = e.PaymentId,
-                            CreatedUtc = e.CreatedUtc,
+                           OrderId = e.OrderId,
+                           CustomerId = e.CustomerId,
+                           GameId = e.GameId,
+                           PaymentId = e.PaymentId,
+                           OrderDate = e.OrderDate,
+                           ShipDate = e.ShipDate,
                         }
                   );
 
                 return query.ToArray();
             }
         }
+
+      public OrderItemsDetails GetOrderItemsById(int id)
+        {
+            using(var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .OrderItems
+                    .Single(e => e.CustomerId == id && e.OrderId == _orderId);
+                return
+                    new OrderItemsDetails
+                    {
+                        OrderId = entity.OrderId,
+                        CustomerId = entity.CustomerId,
+                        GameId = entity.GameId,
+                        PaymentId = entity.PaymentId,
+                        Price = entity.Price,
+                        Quantity = entity.Quantity,
+                        OrderDate = entity.OrderDate,
+                        ShipDate = entity.ShipDate
+                    };
+            }
+        }
+
+        public bool UpdateOrderItems(OrderItemsEdit model)
+        {
+            using(var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .OrderItems
+                    .Single(e => e.OrderId == _orderId);
+                entity.GameId = model.GameId;
+                entity.PaymentId = model.PaymentId;
+                entity.Quantity = model.Quantity;
+                entity.OrderDate = DateTimeOffset.UtcNow;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+
     }
 }
