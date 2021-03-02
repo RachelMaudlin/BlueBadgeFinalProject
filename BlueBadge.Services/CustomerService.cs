@@ -10,11 +10,11 @@ namespace BlueBadge.Services
 {
     public class CustomerService
     {
-        private readonly Guid _customerId;
+        private readonly Guid _userId;
 
-        public CustomerService(Guid customerId)
+        public CustomerService(Guid userId)
         {
-            _customerId = customerId;
+            _userId = userId;
         }
 
         public bool CreateCustomer(CustomerCreate model)
@@ -22,7 +22,7 @@ namespace BlueBadge.Services
             var entity =
                 new Customer()
                 {
-                    CustomerId = _customerId,
+                    OwnerId = _userId, //make changes here and add a public int NoteId to the data model then make migration and make sure no one else makes migrations.
                     FirstName = model.FirstName,
                     LastName = model.LastName,
                     Email = model.Email,
@@ -44,7 +44,7 @@ namespace BlueBadge.Services
                 var query =
                     ctx
                         .Customers
-                        .Where(e => e.CustomerId == _customerId)
+                        .Where(e => e.OwnerId == _userId)
                         .Select(
                             e =>
                                 new CustomerList
@@ -60,14 +60,14 @@ namespace BlueBadge.Services
             }
         }
 
-        public CustomerDetails GetCustomerById(Guid id)
+        public CustomerDetails GetCustomerById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Customers
-                        .Single(e => e.CustomerId == id && e.CustomerId == _customerId);
+                        .Single(e => e.CustomerId == id && e.OwnerId == _userId);
                 return
                     new CustomerDetails
                     {
@@ -89,7 +89,7 @@ namespace BlueBadge.Services
                 var entity =
                     ctx
                         .Customers
-                        .Single(e => e.CustomerId == model.CustomerId && e.CustomerId == _customerId);
+                        .Single(e => e.CustomerId == model.CustomerId && e.OwnerId == _userId);
 
                 entity.FirstName = model.FirstName;
                 entity.LastName = model.LastName;
@@ -101,14 +101,14 @@ namespace BlueBadge.Services
             }
         }
 
-        public bool DeleteCustomer(Guid customerId)
+        public bool DeleteCustomer(int customerId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Customers
-                        .Single(e => e.CustomerId == customerId && e.CustomerId == _customerId);
+                        .Single(e => e.CustomerId == customerId && e.OwnerId == _userId);
 
                 ctx.Customers.Remove(entity);
 

@@ -43,7 +43,7 @@ namespace BlueBadgeFinal.WebAPI.Controllers
         }
 
         [HttpGet]
-        public IHttpActionResult Get(Guid id)
+        public IHttpActionResult Get(int id)
         {
             CustomerService customerService = CreateCustomerService();
             var customer = customerService.GetCustomerById(id);
@@ -63,7 +63,7 @@ namespace BlueBadgeFinal.WebAPI.Controllers
             return Ok();
         }
 
-        public IHttpActionResult Delete(Guid id)
+        public IHttpActionResult Delete(int id)
         {
             var service = CreateCustomerService();
 

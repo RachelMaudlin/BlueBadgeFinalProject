@@ -8,7 +8,7 @@ namespace BlueBadge.Models
 {
     public class CustomerEdit
     {
-        public Guid CustomerId { get; set; }
+        public int CustomerId { get; set; }
 
         public string FirstName { get; set; }
 
