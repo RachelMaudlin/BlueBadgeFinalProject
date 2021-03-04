@@ -10,24 +10,17 @@ namespace BlueBadge.Services
 {
     public class OrderItemsService
     {
-        private readonly Guid _orderId;
 
-        public OrderItemsService(Guid orderId)
-        {
-            _orderId = orderId;
-        }
 
         public bool CreateOrderItems(OrderItemsCreate model)
         {
             var entity =
                 new OrderItems()
                 {
-                    OrderId = _orderId,
-                    CustomerId = model.CustomerId,
+                    OrderItemId = model.OrderItemId,
+                    OrderId = model.OrderID,
                     GameId = model.GameId,
-                    PaymentId = model.PaymentId,
                     Quantity = model.Quantity,
-                    OrderDate = model.OrderDate,
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -45,16 +38,13 @@ namespace BlueBadge.Services
                 var query =
                     ctx
                     .OrderItems
-                    .Where(e => e.OrderId == _orderId)
                     .Select(
                         e =>
                         new OrderItemsListItem
                         {
+                           OrderItemId = e.OrderItemId,
                            OrderId = e.OrderId,
-                           CustomerId = e.CustomerId,
                            GameId = e.GameId,
-                           PaymentId = e.PaymentId,
-                           OrderDate = e.OrderDate,
                            ShipDate = e.ShipDate,
                         }
                   );
@@ -70,17 +60,14 @@ namespace BlueBadge.Services
                 var entity =
                     ctx
                     .OrderItems
-                    .Single(e => e.CustomerId == id && e.OrderId == _orderId);
+                    .Single(e => e.OrderItemId == id);
                 return
                     new OrderItemsDetails
                     {
                         OrderId = entity.OrderId,
-                        CustomerId = entity.CustomerId,
                         GameId = entity.GameId,
-                        PaymentId = entity.PaymentId,
                         Price = entity.Price,
                         Quantity = entity.Quantity,
-                        OrderDate = entity.OrderDate,
                         ShipDate = entity.ShipDate
                     };
             }
@@ -93,11 +80,9 @@ namespace BlueBadge.Services
                 var entity =
                     ctx
                     .OrderItems
-                    .Single(e => e.OrderId == _orderId);
-                entity.GameId = model.GameId;
-                entity.PaymentId = model.PaymentId;
+                    .Single(e => e.OrderItemId == model.OrderItemId);
+                //entity.GameId = model.GameId;
                 entity.Quantity = model.Quantity;
-                entity.OrderDate = DateTimeOffset.UtcNow;
 
                 return ctx.SaveChanges() == 1;
             }

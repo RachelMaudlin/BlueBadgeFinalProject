@@ -10,26 +10,14 @@ namespace BlueBadge.Services
 {
     public class OrdersService
     {
-        private readonly Guid _orderId;
-        
-
-        public OrdersService(Guid orderId)
-        {
-            _orderId = orderId;
-        }
-
-      
-     
         public bool CreateOrders(OrdersCreate model)
         {
             var entity =
                 new Orders()
                 {
-                    OrderId = _orderId,
                     CustomerId = model.CustomerId,
                     PaymentId = model.PaymentId,
                     OrderDate = model.OrderDate,
-                    ShipDate = model.ShipDate,
                 };
             using (var ctx = new ApplicationDbContext())
             {
@@ -45,7 +33,6 @@ namespace BlueBadge.Services
                 var query =
                     ctx
                     .Orders
-                    .Where(e => e.OrderId == _orderId)
                     .Select(
                         e =>
                         new OrdersListItem
@@ -54,7 +41,6 @@ namespace BlueBadge.Services
                             CustomerId = e.CustomerId,
                             PaymentId = e.PaymentId,
                             OrderDate = e.OrderDate,
-                            ShipDate = e.ShipDate,
                         }
                     );
 
@@ -69,7 +55,7 @@ namespace BlueBadge.Services
                 var entity =
                     ctx
                     .Orders
-                    .Single(e => e.CustomerId == id && e.OrderId == _orderId);
+                    .Single(e => e.OrderId == id);
                 return
                     new OrdersDetails
                     {
@@ -77,7 +63,6 @@ namespace BlueBadge.Services
                         CustomerId = entity.CustomerId,
                         PaymentId = entity.PaymentId,
                         OrderDate = entity.OrderDate,
-                        ShipDate = entity.OrderDate
                     };
             }
         }
@@ -90,7 +75,7 @@ namespace BlueBadge.Services
                 var entity =
                     ctx
                     .Orders
-                    .Single(e => e.OrderId == _orderId);
+                    .Single(e => e.OrderId == model.OrderId);
 
                 entity.CustomerId = model.CustomerId;
                 entity.PaymentId = model.PaymentId;

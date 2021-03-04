@@ -15,8 +15,7 @@ namespace BlueBadgeFinal.WebAPI.Controllers
     {
        private OrdersService CreateOrdersService()
         {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var ordersService = new OrdersService(userId);
+            var ordersService = new OrdersService();
             return ordersService;
         }
 

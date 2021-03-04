@@ -16,8 +16,7 @@ namespace BlueBadgeFinal.WebAPI.Controllers
         
         private OrderItemsService CreateOrderItemsService()
         {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var orderItemsService = new OrderItemsService(userId);
+            var orderItemsService = new OrderItemsService();
             return orderItemsService;
         }
 
@@ -45,7 +44,7 @@ namespace BlueBadgeFinal.WebAPI.Controllers
         {
             OrderItemsService orderItemsService = CreateOrderItemsService();
             var orderItems = orderItemsService.GetOrderItemsById(id);
-            return Ok();
+            return Ok(orderItems);
         }
 
         public IHttpActionResult Put(OrderItemsEdit orderItems)

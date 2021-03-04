@@ -9,20 +9,19 @@ namespace BlueBadge.Models
 {
     public class OrderItemsDetails
     {
+        [Display(Name ="Item")]
+
+        public int OrderItemId { get; set; }
+
         [Display(Name = "Order Number")]
-        public Guid OrderId { get; set; }
-        
-        public int CustomerId { get; set; }
-        
+        public int  OrderId { get; set; }
+
         public int GameId { get; set; }
+
         [Display(Name ="Credit Card")]
-        public int PaymentId { get; set; }
-        
         public double Price { get; set; }
         
         public int Quantity { get; set; }
-        
-        public DateTimeOffset OrderDate { get; set; }
         public DateTimeOffset ShipDate { get; set; }
     }
 }

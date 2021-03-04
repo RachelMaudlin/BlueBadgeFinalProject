@@ -10,13 +10,12 @@ namespace BlueBadge.Models
     public class OrderItemsCreate
     {
         [Required]
-        public Guid OrderID { get; set; }
-        public int CustomerId { get; set; }
+        public int OrderItemId { get; set; }
+        [Required]
+        public int OrderID { get; set; }
         [Required]
         public int GameId { get; set; }
-        public int PaymentId { get; set; }
         [Required]
         public int Quantity { get; set; }
-        public DateTimeOffset OrderDate { get; set; }
     }
 }
