@@ -7,13 +7,13 @@ namespace BlueBadge.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class AddedCustomer : IMigrationMetadata
+    public sealed partial class addedvirtualprops : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedCustomer));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(addedvirtualprops));
         
         string IMigrationMetadata.Id
         {
-            get { return "202102232350463_AddedCustomer"; }
+            get { return "202103050152154_addedvirtualprops"; }
         }
         
         string IMigrationMetadata.Source

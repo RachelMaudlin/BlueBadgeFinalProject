@@ -12,11 +12,14 @@ namespace BlueBadge.Data
     {
         [Key]
         public int OrderItemId { get; set; }
-        [ForeignKey(nameof(OrderId))]
+        [ForeignKey(nameof(Orders))]
         public int OrderId { get; set; }
+        public virtual Orders Orders { get; set; }
+
         [Required]
-        [ForeignKey(nameof(GameId))]
+        [ForeignKey(nameof(VideoGames))]
         public int GameId { get; set; }
+        public virtual VideoGames VideoGames { get; set; }
         [Required]
         public double Price { get; set; }
         [Required]
