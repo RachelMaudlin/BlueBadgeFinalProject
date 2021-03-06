@@ -26,7 +26,8 @@ namespace BlueBadge.Services
                     Console = model.Console,
                     GenreType = model.GenreType,
                     ReleaseYear = model.ReleaseYear,
-                    CreatedUtc = DateTimeOffset.Now
+                    CreatedUtc = DateTimeOffset.Now,
+                    Quantity = model.Quantity
                 };
             using (var ctx = new ApplicationDbContext())
             {
@@ -50,6 +51,7 @@ namespace BlueBadge.Services
                            Console = e.Console,
                            GenreType = e.GenreType,
                            ReleaseYear = e.ReleaseYear,
+                           Quantity = e.Quantity,
                            CreatedUtc = e.CreatedUtc,
                            ModifiedUtc = e.ModifiedUtc
                        }
