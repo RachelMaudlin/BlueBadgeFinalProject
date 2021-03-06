@@ -25,6 +25,7 @@ namespace BlueBadge.Services
                     GameTitle = model.GameTitle,
                     Console = model.Console,
                     GenreType = model.GenreType,
+                    Price = model.Price,
                     ReleaseYear = model.ReleaseYear,
                     CreatedUtc = DateTimeOffset.Now,
                     Quantity = model.Quantity
@@ -52,6 +53,7 @@ namespace BlueBadge.Services
                            GenreType = e.GenreType,
                            ReleaseYear = e.ReleaseYear,
                            Quantity = e.Quantity,
+                           Price = e.Price,
                            CreatedUtc = e.CreatedUtc,
                            ModifiedUtc = e.ModifiedUtc
                        }
@@ -73,6 +75,7 @@ namespace BlueBadge.Services
                         GameTitle = entity.GameTitle,
                         Console = entity.Console,
                         GenreType = entity.GenreType,
+                        Price = entity.Price,
                         ReleaseYear = entity.ReleaseYear,
                         CreatedUtc = entity.CreatedUtc,
                         ModifiedUtc = entity.ModifiedUtc
@@ -91,6 +94,7 @@ namespace BlueBadge.Services
                 entity.GameTitle = model.GameTitle;
                 entity.GenreType = model.GenreType;
                 entity.Console = model.Console;
+                entity.Price = model.Price;
                 entity.Quantity = model.Quantity;
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;
 

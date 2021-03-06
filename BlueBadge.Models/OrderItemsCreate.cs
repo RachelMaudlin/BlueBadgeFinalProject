@@ -17,5 +17,6 @@ namespace BlueBadge.Models
         public int GameId { get; set; }
         [Required]
         public int Quantity { get; set; }
+        public DateTimeOffset ShipDate { get; set; }
     }
 }

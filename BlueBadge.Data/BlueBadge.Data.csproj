@@ -90,6 +90,18 @@
     <Compile Include="Migrations\202103061535132_initialmigration.Designer.cs">
       <DependentUpon>202103061535132_initialmigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202103061921474_UpdateDatadase.cs" />
+    <Compile Include="Migrations\202103061921474_UpdateDatadase.Designer.cs">
+      <DependentUpon>202103061921474_UpdateDatadase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103061949225_TestDatabase.cs" />
+    <Compile Include="Migrations\202103061949225_TestDatabase.Designer.cs">
+      <DependentUpon>202103061949225_TestDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103062000501_MovedPrice.cs" />
+    <Compile Include="Migrations\202103062000501_MovedPrice.Designer.cs">
+      <DependentUpon>202103062000501_MovedPrice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="OrderItems.cs" />
     <Compile Include="Orders.cs" />
@@ -103,6 +115,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202103061535132_initialmigration.resx">
       <DependentUpon>202103061535132_initialmigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103061921474_UpdateDatadase.resx">
+      <DependentUpon>202103061921474_UpdateDatadase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103061949225_TestDatabase.resx">
+      <DependentUpon>202103061949225_TestDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103062000501_MovedPrice.resx">
+      <DependentUpon>202103062000501_MovedPrice.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -21,8 +21,6 @@ namespace BlueBadge.Data
         public int GameId { get; set; }
         public virtual VideoGames VideoGames { get; set; }
         [Required]
-        public double Price { get; set; }
-        [Required]
         public int Quantity { get; set; }
         public DateTimeOffset ShipDate { get; set; }
     }

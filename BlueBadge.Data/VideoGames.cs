@@ -51,10 +51,13 @@ namespace BlueBadge.Data
         public GameConsole Console { get; set; }
      
         public int Quantity { get; set; }
+        [Required]
+        public double Price { get; set; }
         public DateTime ReleaseYear { get; set; }
         [Required]
         public TypeOfGenre GenreType { get; set; }
         public DateTimeOffset CreatedUtc { get; set; }
         public DateTimeOffset? ModifiedUtc { get; set; }
+
     }
 }

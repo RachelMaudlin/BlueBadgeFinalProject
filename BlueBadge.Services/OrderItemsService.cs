@@ -21,6 +21,7 @@ namespace BlueBadge.Services
                     OrderId = model.OrderId,
                     GameId = model.GameId,
                     Quantity = model.Quantity,
+                    ShipDate = model.ShipDate
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -42,6 +43,7 @@ namespace BlueBadge.Services
                         e =>
                         new OrderItemsListItem
                         {
+                           Quantity = e.Quantity,
                            OrderItemId = e.OrderItemId,
                            OrderId = e.OrderId,
                            GameId = e.GameId,
@@ -64,9 +66,9 @@ namespace BlueBadge.Services
                 return
                     new OrderItemsDetails
                     {
+                        OrderItemId = entity.OrderItemId,
                         OrderId = entity.OrderId,
                         GameId = entity.GameId,
-                        Price = entity.Price,
                         Quantity = entity.Quantity,
                         ShipDate = entity.ShipDate
                     };
