@@ -19,18 +19,7 @@ namespace BlueBadgeFinal.WebAPI.Controllers
             return ordersService;
         }
 
-        public IHttpActionResult Order(OrdersCreate orders)
-        {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            var service = CreateOrdersService();
-
-            if (!service.CreateOrders(orders))
-                return InternalServerError();
-
-            return Ok();
-        }
+       
 
         public IHttpActionResult Create(OrdersCreate orders)
         {

@@ -15,6 +15,7 @@ namespace BlueBadge.Services
             var entity =
                 new Orders()
                 {
+                    OrderId = model.OrderId,
                     CustomerId = model.CustomerId,
                     PaymentId = model.PaymentId,
                     OrderDate = model.OrderDate,

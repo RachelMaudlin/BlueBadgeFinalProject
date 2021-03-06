@@ -12,7 +12,7 @@ namespace BlueBadge.Models
         [Required]
         public int OrderItemId { get; set; }
         [Required]
-        public int OrderID { get; set; }
+        public int OrderId { get; set; }
         [Required]
         public int GameId { get; set; }
         [Required]

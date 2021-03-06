@@ -86,9 +86,9 @@
   <ItemGroup>
     <Compile Include="Customer.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202103050152154_addedvirtualprops.cs" />
-    <Compile Include="Migrations\202103050152154_addedvirtualprops.Designer.cs">
-      <DependentUpon>202103050152154_addedvirtualprops.cs</DependentUpon>
+    <Compile Include="Migrations\202103061535132_initialmigration.cs" />
+    <Compile Include="Migrations\202103061535132_initialmigration.Designer.cs">
+      <DependentUpon>202103061535132_initialmigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="OrderItems.cs" />
@@ -101,8 +101,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202103050152154_addedvirtualprops.resx">
-      <DependentUpon>202103050152154_addedvirtualprops.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202103061535132_initialmigration.resx">
+      <DependentUpon>202103061535132_initialmigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

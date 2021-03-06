@@ -18,7 +18,7 @@ namespace BlueBadge.Services
                 new OrderItems()
                 {
                     OrderItemId = model.OrderItemId,
-                    OrderId = model.OrderID,
+                    OrderId = model.OrderId,
                     GameId = model.GameId,
                     Quantity = model.Quantity,
                 };
