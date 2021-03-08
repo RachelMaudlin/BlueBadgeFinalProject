@@ -59,5 +59,15 @@ namespace BlueBadgeFinal.WebAPI.Controllers
 
             return Ok();
         }
+
+        public IHttpActionResult Delete(int id)
+        {
+            var service = CreateOrderItemsService();
+
+            if (!service.DeleteOrderItems(id))
+                return InternalServerError();
+
+            return Ok();
+        }
     }
 }

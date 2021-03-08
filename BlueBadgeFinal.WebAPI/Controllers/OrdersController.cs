@@ -19,8 +19,6 @@ namespace BlueBadgeFinal.WebAPI.Controllers
             return ordersService;
         }
 
-       
-
         public IHttpActionResult Create(OrdersCreate orders)
         {
             if (!ModelState.IsValid)
@@ -32,6 +30,12 @@ namespace BlueBadgeFinal.WebAPI.Controllers
                 return InternalServerError();
 
             return Ok();
+        }
+        public IHttpActionResult Get()
+        {
+            OrdersService ordersService = CreateOrdersService();
+            var orders = ordersService.GetOrders();
+            return Ok(orders);
         }
 
         public IHttpActionResult Get(int id)
@@ -49,6 +53,16 @@ namespace BlueBadgeFinal.WebAPI.Controllers
             var service = CreateOrdersService();
 
             if (!service.UpdateOrders(orders))
+                return InternalServerError();
+
+            return Ok();
+        }
+
+        public IHttpActionResult Delete(int id)
+        {
+            var service = CreateOrdersService();
+
+            if (!service.DeleteOrders(id))
                 return InternalServerError();
 
             return Ok();
