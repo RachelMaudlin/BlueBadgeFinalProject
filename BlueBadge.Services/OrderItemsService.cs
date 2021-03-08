@@ -90,6 +90,22 @@ namespace BlueBadge.Services
             }
         }
 
+        public bool DeleteOrderItems(int orderItemsId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                     ctx
+
+                         .OrderItems
+                         .Single(e => e.OrderItemId == orderItemsId);
+
+                ctx.OrderItems.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
 
     }
 }
